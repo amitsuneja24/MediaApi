@@ -7,7 +7,8 @@ const path= require('path');
 const GridFsStorage= require('multer-gridfs-storage');
 const multer=require('multer');
 
-//app.use(fileUpload());
+//Port
+var port= process.env.port || 3000;
 
 //Mongo Uri
 const mongoURI= 'mongodb+srv://amitsuneja24:75036688260@videos.cx5oy.mongodb.net/video_uploads?retryWrites=true&w=majority';
@@ -63,4 +64,4 @@ app.post('/upload',upload.single(`video`),(req,res)=>{
 
 })
 
-app.listen(3000,()=>console.log('Started on port 3000'));
+app.listen(port,()=>console.log('Started on port 3000'));
