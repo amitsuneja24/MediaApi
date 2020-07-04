@@ -56,7 +56,7 @@ app.get('/',(req,res)=>{
 app.post('/upload',upload.single(`video`),(req,res)=>{
     const file=req.file;
     console.log(file);
-    res.json({
+    res.status(200).json({
         success: true,
         message: 'File Uploaded',
         file_name:req.file.originalname
