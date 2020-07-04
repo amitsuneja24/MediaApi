@@ -48,7 +48,7 @@ const upload = multer({ storage });
 
 //Routes GET
 app.get('/',(req,res)=>{
-    res.status(200).json('Upload a Video');
+    res.status(200).json({'1':'Upload a Video'});
 })
 
 
